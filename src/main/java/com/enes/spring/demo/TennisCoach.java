@@ -1,6 +1,7 @@
 package com.enes.spring.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 //@Component("thatSillyCoach")
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 	
 	@Autowired //-> reflection : no need constructor or setter methods for injection
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 	
 	// define a default constructor
